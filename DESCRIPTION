@@ -1,0 +1,24 @@
+Package: DF2GRAPH
+Type: Package
+Title: Transforms a (simple) Data Frame into an {igraph} graph object
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Nicolas", "Leconte-Demarsy",
+      email = "nicolas.lecontedemarsy@r-es.org",
+      role = c("aut", "cre")
+    )
+  )
+Description: Taking a Data Frame as input, the package first takes each row and 
+    transforms it into a list of edges (in matrix format).
+    Each matrix (for each row) is then binded together. Then it removes
+    duplicate rows (edges).
+    Finally it takes said list of edges and sets it as an igraph graph object.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: igraph (>= 2.1.0)
+RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
