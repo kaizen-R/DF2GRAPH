@@ -8,7 +8,7 @@ Provided you have the "devtools" and the required packages / R setup, you should
 
 ```R
 library(devtools)
-install_github("kaizen-R/RLCS")
+install_github("kaizen-R/DF2GRAPH")
 ```
 
 # How does it work?
