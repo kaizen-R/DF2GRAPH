@@ -9,9 +9,10 @@ plot(g)
 ## With more columns:
 df <- data.frame(
   v1 = sample(letters[1:5], 4),
-  v2 = sample(letters[1:5], 4),
+  v2 = c(NA, sample(letters[1:5], 3)),
   v3 = sample(letters[1:5], 4),
-  v4 = sample(letters[1:5], 4)
+  v4 = sample(letters[1:5], 4),
+  v5 = c("a", NA, NA, "c")
 )
 df
 ## Removes duplicates
