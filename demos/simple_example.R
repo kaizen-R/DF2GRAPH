@@ -12,7 +12,7 @@ df <- data.frame(
   v2 = c(NA, sample(letters[1:5], 3)),
   v3 = sample(letters[1:5], 4),
   v4 = sample(letters[1:5], 4),
-  v5 = c("a", NA, NA, "c")
+  v5 = c("a", "", NA, "c")
 )
 df
 ## Removes duplicates

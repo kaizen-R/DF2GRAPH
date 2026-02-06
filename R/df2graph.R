@@ -1,4 +1,15 @@
 
+
+.valid_node_names <- function(x) {
+  if(any(is.null(x)))
+    x <- x[-which(is.null(x))]
+  if(any(is.na(x)))
+    x <- x[-which(is.na(x))]
+  if(any(x == ''))
+    x <- x[-which(x == '')]
+
+  x
+}
 #' Transform DF row to an edges list.
 #'
 #' @param x
@@ -10,10 +21,9 @@
 #'
 .row_to_graph_edge_list <- function(x) {
   x <- sapply(x, \(y) y) ## Weird this is needed... Wouldn't work otherwise...
-  if(any(is.null(x)))
-    x <- x[-which(is.null(x))]
-  if(any(is.na(x)))
-    x <- x[-which(is.na(x))]
+
+  x <- .valid_node_names(x)
+
   if(length(x) < 2L)
     return(NULL)
   cbind(utils::head(x, -1L), utils::tail(x, -1L))
